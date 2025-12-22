@@ -1,0 +1,23 @@
+# Application Configuration
+APP_NAME=clinic-management-api
+APP_ENV=development
+APP_DEBUG_MODE=true
+APP_PORT=8080
+
+# Database Configuration
+# PostgreSQL example:
+DB_URL=postgres://username:password@localhost:5432/clinic_db?sslmode=disable
+
+# MySQL example (alternative):
+# DB_URL=mysql://username:password@tcp(localhost:3306)/clinic_db?charset=utf8mb4&parseTime=True&loc=Local
+
+# Database Migration and Seeder
+DB_RUN_MIGRATION=true
+DB_RUN_SEEDER=false
+
+# Temporal Client URL (if using Temporal for workflow management)
+TEMPORAL_CLIENT_URL=localhost:7233
+
+# Version
+VERSION=1.0.0
+

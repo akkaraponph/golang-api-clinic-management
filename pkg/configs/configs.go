@@ -34,7 +34,10 @@ func init() {
 	if err != nil {
 		APP_DEBUG_MODE = false
 	}
-	VERSION = viper.GetString("1.0.1")
+	VERSION = viper.GetString("VERSION")
+	if VERSION == "" {
+		VERSION = "1.0.0"
+	}
 
 	APP_API_VERSION = "v2"
 	SERVER_HTTP_PORT = viper.GetString("APP_PORT")

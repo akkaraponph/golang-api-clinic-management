@@ -3,7 +3,6 @@ package handlers
 import (
 	"github.com/billowdev/golang-api-clinic-management/internal/adapters/http/dto"
 	"github.com/billowdev/golang-api-clinic-management/internal/core/ports"
-	"github.com/billowdev/golang-api-clinic-management/pkg/uuidv7"
 	"github.com/billowdev/golang-api-clinic-management/pkg/utils"
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"

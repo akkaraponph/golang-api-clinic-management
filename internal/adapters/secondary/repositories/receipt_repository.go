@@ -7,7 +7,6 @@ import (
 	"github.com/billowdev/golang-api-clinic-management/internal/core/ports"
 	"github.com/google/uuid"
 	"gorm.io/gorm"
-	"strings"
 )
 
 type receiptRepository struct {
