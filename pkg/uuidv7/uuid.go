@@ -79,3 +79,8 @@ func MustParseToUUIDv7(s string) uuid.UUID {
 func UUIDv7ToString(id uuid.UUID) string {
 	return id.String()
 }
+
+// NilUUID returns the zero value of UUID (uuid.Nil)
+func NilUUID() uuid.UUID {
+	return uuid.Nil
+}

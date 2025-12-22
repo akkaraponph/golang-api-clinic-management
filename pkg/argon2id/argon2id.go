@@ -181,6 +181,11 @@ func DecodeHash(hash string) (params *Params, salt, key []byte, err error) {
 }
 
 func NewPassword(password string) string {
-	hash, _ := CreateHash("password", DefaultParams)
+	hash, _ := CreateHash(password, DefaultParams)
 	return hash
+}
+
+func ComparePassword(hash, password string) bool {
+	match, _ := ComparePasswordAndHash(password, hash)
+	return match
 }
