@@ -10,6 +10,8 @@ func SetupEmployeeRoutes(app fiber.Router, handler *handlers.EmployeeHandler) {
 	employees.Get("/", handler.GetAll)
 	employees.Get("/:id", handler.GetByID)
 	employees.Post("/", handler.Create)
+	employees.Put("/:id", handler.Update)
+	employees.Delete("/:id", handler.Delete)
 	
 	auth := app.Group("/auth")
 	auth.Post("/login", handler.Login)

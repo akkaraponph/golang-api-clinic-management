@@ -79,6 +79,22 @@ func ToEmployeeDomain(req *EmployeeCreateRequest) *domain.Employee {
 	}
 }
 
+type EmployeeUpdateRequest struct {
+	Name        string `json:"name" validate:"max=100"`
+	Surname     string `json:"surname" validate:"max=100"`
+	Email       string `json:"email" validate:"max=255,email"`
+	Username    string `json:"username" validate:"max=100"`
+	Password    string `json:"password"`
+	Sex         string `json:"sex"`
+	Phone       string `json:"phone" validate:"max=20"`
+	Permission  string `json:"permission"`
+	Address     string `json:"address" validate:"max=255"`
+	Subdistrict string `json:"subdistrict" validate:"max=100"`
+	District    string `json:"district" validate:"max=100"`
+	Province    string `json:"province" validate:"max=100"`
+	Zipcode     string `json:"zipcode" validate:"max=10"`
+}
+
 type LoginRequest struct {
 	Username string `json:"username" validate:"required"`
 	Password string `json:"password" validate:"required"`
